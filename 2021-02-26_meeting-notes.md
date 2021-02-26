@@ -4,8 +4,8 @@
 - In `geo2rdr`, you know the target position in map (geodetic or projected + height) coordinates, and want to find the target position in "radar" coordinates (azimuth time & slant range)
 - In `rdr2geo`, you know the sensor's position & velocity (via azimuth time), slant range to the target, and Doppler of the target. You wish to find the target's position in map coordinates.
 - In both cases, some iterative root-finding algorithm is applied (Newton's method is used in isce3) to approximately solve the Range-Doppler equation.
-- [`geo2rdr` in isce3](https://github.com/isce-framework/isce3/blob/develop/cxx/isce3/geometry/detail/Geo2Rdr.h)
-- [`rdr2geo` in isce3](https://github.com/isce-framework/isce3/blob/develop/cxx/isce3/geometry/detail/Rdr2Geo.h)
+- [`geo2rdr` in isce3](https://github.com/isce-framework/isce3/blob/0eb175f86f6c74d86c19ba9623f23054513fc657/cxx/isce3/geometry/detail/Geo2Rdr.h)
+- [`rdr2geo` in isce3](https://github.com/isce-framework/isce3/blob/0eb175f86f6c74d86c19ba9623f23054513fc657/cxx/isce3/geometry/detail/Rdr2Geo.h)
 - Conceptually, geo2rdr & rdr2geo require 5 arguments:
 	- **Sensor** - some data structure that encapsulates {Orbit, Doppler, wavelength, LookSide(?)}
 	- **Surface** - one of {Ellipsoid, Geoid, "DEMInterpolator", Tangent plane, etc.}
